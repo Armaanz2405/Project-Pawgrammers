@@ -1,0 +1,23 @@
+<h2>Quiz Page 3</h2>
+
+<div style="margin-bottom: 1.5rem;">
+  <label>1. How comfortable are you with object-oriented programming?</label>
+  <textarea [(ngModel)]="quizService.answers['quiz3'][0]" rows="3" style="width: 100%; margin-top: 0.5rem;"></textarea>
+</div>
+
+<div style="margin-bottom: 1.5rem;">
+  <label>2. Describe a scenario where you optimized code performance.</label>
+  <textarea [(ngModel)]="quizService.answers['quiz3'][1]" rows="3" style="width: 100%; margin-top: 0.5rem;"></textarea>
+</div>
+
+<div style="margin-bottom: 1.5rem;">
+  <label>3. Do you have experience with web development frameworks?</label>
+  <textarea [(ngModel)]="quizService.answers['quiz3'][2]" rows="3" style="width: 100%; margin-top: 0.5rem;"></textarea>
+</div>
+
+<div style="margin-bottom: 1.5rem;">
+  <label>4. What areas of programming do you want to improve?</label>
+  <textarea [(ngModel)]="quizService.answers['quiz3'][3]" rows="3" style="width: 100%; margin-top: 0.5rem;"></textarea>
+</div>
+
+<button (click)="submit()" style="padding: 0.5rem 1rem; font-size: 1rem;">Submit</button>

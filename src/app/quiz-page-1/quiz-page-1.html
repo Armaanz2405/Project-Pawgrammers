@@ -1,0 +1,23 @@
+<h2>Quiz Page 1</h2>
+
+<div style="margin-bottom: 1.5rem;">
+  <label>1. What programming languages are you familiar with?</label>
+  <textarea [(ngModel)]="quizService.answers['quiz1'][0]" rows="3" style="width: 100%; margin-top: 0.5rem;"></textarea>
+</div>
+
+<div style="margin-bottom: 1.5rem;">
+  <label>2. Describe a programming project you have completed.</label>
+  <textarea [(ngModel)]="quizService.answers['quiz1'][1]" rows="3" style="width: 100%; margin-top: 0.5rem;"></textarea>
+</div>
+
+<div style="margin-bottom: 1.5rem;">
+  <label>3. How comfortable are you with debugging code?</label>
+  <textarea [(ngModel)]="quizService.answers['quiz1'][2]" rows="3" style="width: 100%; margin-top: 0.5rem;"></textarea>
+</div>
+
+<div style="margin-bottom: 1.5rem;">
+  <label>4. Have you used version control systems like Git before?</label>
+  <textarea [(ngModel)]="quizService.answers['quiz1'][3]" rows="3" style="width: 100%; margin-top: 0.5rem;"></textarea>
+</div>
+
+<button (click)="nextPage()" style="padding: 0.5rem 1rem; font-size: 1rem;">Next</button>
