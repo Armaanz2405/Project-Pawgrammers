@@ -14,8 +14,7 @@ export class QuizPage2 {
   constructor(public quizService: QuizAnswers, private router: Router) {}
 
   nextPage() {
-    const unanswered = this.quizService.answers['quiz2'].some(ans => !ans.trim());
-    if (unanswered) {
+    const unanswered = this.quizService.answers.slice(4, 8).some(ans => !ans.trim());    if (unanswered) {
       alert('Please answer all questions before proceeding.');
       return;
     }

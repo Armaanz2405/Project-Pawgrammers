@@ -14,8 +14,7 @@ export class QuizPage3 {
   constructor(public quizService: QuizAnswers) {}
 
   submit() {
-    const unanswered = this.quizService.answers['quiz3'].some(ans => !ans.trim());
-    if (unanswered) {
+    const unanswered = this.quizService.answers.slice(8, 12).some(ans => !ans.trim());    if (unanswered) {
       alert('Please answer all questions before submitting.');
       return;
     }
