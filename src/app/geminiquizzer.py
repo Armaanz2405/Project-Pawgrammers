@@ -40,7 +40,7 @@ for i, question in enumerate(questions):
 full_context = "\n\n".join(conversation_history)
 
 # Create the prompt for the model
-prompt = f"Given the following quiz responses, rate the user's programming experience on a scale of 1-4. \n\nHere are the questions and answers:\n{full_context}\n\nRating (1=Beginner, 2=Novice, 3=Intermediate, 4=Advanced):"
+prompt = f"Given the following quiz responses, rate the user's programming experience on a scale of 1-4. \n\nHere are the questions and answers:\n{full_context}\n\nRating (1=Beginner, 2=Novice, 3=Intermediate, 4=Advanced). Your final response must be the single number corresponding to the rating (1, 2, 3, or 4), with no additional text or explanation."
 
 model = genai.GenerativeModel('gemini-2.5-flash')
 
