@@ -7,8 +7,7 @@ import { ResultMercury } from './result-mercury/result-mercury';
 import { ResultEarth } from './result-earth/result-earth';
 import { ResultJupiter } from './result-jupiter/result-jupiter';
 import { ResultUranus } from './result-uranus/result-uranus';
-
-
+import { PlanetsMap } from './planets-map/planets-map';
 
 export const routes: Routes = [
   { path: '', component: SignupPage },
@@ -19,4 +18,5 @@ export const routes: Routes = [
   { path: 'result-earth', component: ResultEarth },
   { path: 'result-jupiter', component: ResultJupiter },
   { path: 'result-uranus', component: ResultUranus },
+  { path: 'planets-map', component: PlanetsMap },
 ];
