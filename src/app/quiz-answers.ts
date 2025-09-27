@@ -4,17 +4,10 @@ import { Injectable } from '@angular/core';
   providedIn: 'root'
 })
 export class QuizAnswers {
-  answers: { [key: string]: string[] } = {
-    'quiz1': ['', '', '', ''],
-    'quiz2': ['', '', '', ''],
-    'quiz3': ['', '', '', ''],
-  };
+  answers: string[] = Array(12).fill('');
 
-  getAllAnswers(): { [key: string]: string[] } {
-    return {
-      quiz1: [...this.answers['quiz1']],
-      quiz2: [...this.answers['quiz2']],
-      quiz3: [...this.answers['quiz3']],
-    };
+
+  getAllAnswers(): string[] {
+    return [...this.answers];
   }
 }

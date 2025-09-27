@@ -15,8 +15,7 @@ export class QuizPage1 {
 
   nextPage() {
     // Ensure all questions are answered
-    const unanswered = this.quizService.answers['quiz1'].some(ans => !ans.trim());
-    if (unanswered) {
+    const unanswered = this.quizService.answers.slice(0, 4).some(ans => !ans.trim());    if (unanswered) {
       alert('Please answer all questions before proceeding.');
       return;
     }
