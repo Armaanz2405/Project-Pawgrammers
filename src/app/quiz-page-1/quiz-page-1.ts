@@ -2,11 +2,11 @@ import { Component } from '@angular/core';
 import { RouterModule } from '@angular/router';
 
 @Component({
-  selector: 'app-signup-page',
+  selector: 'app-quiz-page-1',
   imports: [RouterModule],
-  templateUrl: './signup-page.html',
-  styleUrl: './signup-page.css'
+  templateUrl: './quiz-page-1.html',
+  styleUrl: './quiz-page-1.css'
 })
-export class SignupPage {
+export class QuizPage1 {
 
 }
