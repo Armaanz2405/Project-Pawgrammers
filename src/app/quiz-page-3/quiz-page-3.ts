@@ -3,6 +3,8 @@ import { Router } from '@angular/router';
 import { RouterModule } from '@angular/router';
 import { FormsModule } from '@angular/forms';
 import { QuizAnswers } from '../quiz-answers';
+import { HttpClient } from '@angular/common/http';
+import { inject } from '@angular/core';
 
 @Component({
   selector: 'app-quiz-page-3',
@@ -11,7 +13,9 @@ import { QuizAnswers } from '../quiz-answers';
   styleUrl: './quiz-page-3.css'
 })
 export class QuizPage3 {
-  constructor(public quizService: QuizAnswers) {}
+
+  quizService = inject(QuizAnswers);
+  http = inject(HttpClient);
 
   submit() {
     const unanswered = this.quizService.answers.slice(8, 12).some(ans => !ans.trim());    if (unanswered) {
@@ -22,6 +26,17 @@ export class QuizPage3 {
     const allAnswers = this.quizService.getAllAnswers();
     console.log('All answers:', allAnswers);
     // TODO: send allAnswers to backend
-    alert('Quiz submitted successfully!');
+    // Send to Python backend
+    this.http.post('http://localhost:5000/submit-quiz', allAnswers)
+      .subscribe({
+        next: (res) => {
+          console.log('Server response:', res);
+          alert('Quiz submitted successfully!');
+        },
+        error: (err) => {
+          console.error(err);
+          alert('Error submitting quiz');
+        }
+      });
   }
 }
