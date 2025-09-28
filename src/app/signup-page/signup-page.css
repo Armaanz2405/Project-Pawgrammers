@@ -12,7 +12,7 @@
 .signup-text-box {
   position: absolute;
   top: 50%;
-  left: 15%;                 /* positions box toward the middle-left */
+  left: 10%;                 /* positions box toward the middle-left */
   transform: translateY(-50%); /* centers vertically */
   background-color: #79747E;
   padding: 2rem 3rem;
@@ -20,6 +20,7 @@
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3); /* drop shadow */
   max-width: 350px;          /* keeps it long but not too wide */
 }
+
 
 .signup-header {
   font-family: 'Audiowide', sans-serif; /* your global header font */
