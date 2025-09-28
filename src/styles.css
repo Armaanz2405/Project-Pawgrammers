@@ -5,6 +5,10 @@
 body {
     font-family: 'Audiowide', sans-serif;
     background-color: #24164C;
-    background: url('./assets/MainBackground.png') no-repeat center center fixed;
+    background: url('./assets/MainBackground.png') no-repeat center center;
+
     background-size: cover;
+    margin: 0;                /* removes default body margin */
+    height: 100vh;  
+    overflow: hidden; /* prevents scrolling */
   }

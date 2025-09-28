@@ -1,0 +1,30 @@
+.result-heading {
+  font-family: 'Audiowide', sans-serif; /* uses global font */
+  font-size: 4rem; /* big text */
+  color: rgba(255, 255, 255); /* white, transparent (70%) */
+  position: absolute;
+  top: 60px;   /* space from top */
+  left: 60px;  /* space from left */
+}
+
+.result-image {
+  display: flex;
+  justify-content: center; /* center horizontally */
+  align-items: center;     /* center vertically if container grows */
+  margin-top: 100px;       /* spacing below heading */
+}
+
+.result-image img {
+  max-width: 60%;   /* shrink if screen is small */
+  height: auto;     /* keep proportions */
+}
+
+.page-footer {
+  background-color: #24164C;
+  height: 60px;           /* adjust height as needed */
+  width: 100%;
+  position: fixed;        /* stick to bottom of viewport */
+  bottom: 0;
+  left: 0;
+  z-index: 1000;          /* make sure it’s on top */
+}
