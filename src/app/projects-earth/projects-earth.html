@@ -9,7 +9,6 @@
   <button class="orbit-button" (click)="goToResults()">
     <!-- Previous image slides out along rising arc -->
     <img
-      *ngIf="animationDirection"
       [src]="orbitItems[previousIndex].src"
       [alt]="orbitItems[previousIndex].name"
       [class.curve-out-left]="animationDirection === 'left'"
