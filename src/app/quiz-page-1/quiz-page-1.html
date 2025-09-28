@@ -1,23 +1,29 @@
-<h2>Quiz Page 1</h2>
 
-<div style="margin-bottom: 1.5rem;">
-  <label>1. What programming languages are you familiar with?</label>
-  <textarea [(ngModel)]="quizService.answers[0]" rows="3" style="width: 100%; margin-top: 0.5rem;"></textarea>
+<div class="quiz-question">
+  <label>>_ 1. How many languages do you know and what languages?</label>
+  <textarea [(ngModel)]="quizService.answers[0]" rows="3"></textarea>
 </div>
 
-<div style="margin-bottom: 1.5rem;">
-  <label>2. Describe a programming project you have completed.</label>
-  <textarea [(ngModel)]="quizService.answers[1]" rows="3" style="width: 100%; margin-top: 0.5rem;"></textarea>
+<div class="quiz-question">
+  <label>>_ 2. Rate your programming experience from (1-10) Explain.</label>
+  <textarea [(ngModel)]="quizService.answers[1]" rows="3"></textarea>
 </div>
 
-<div style="margin-bottom: 1.5rem;">
-  <label>3. How comfortable are you with debugging code?</label>
-  <textarea [(ngModel)]="quizService.answers[2]" rows="3" style="width: 100%; margin-top: 0.5rem;"></textarea>
+<div class="quiz-question">
+  <label>>_ 3. List the most recent project you've worked on with a brief explanation of the project.</label>
+  <textarea [(ngModel)]="quizService.answers[2]" rows="3"></textarea>
 </div>
 
-<div style="margin-bottom: 1.5rem;">
-  <label>4. Have you used version control systems like Git before?</label>
-  <textarea [(ngModel)]="quizService.answers[3]" rows="3" style="width: 100%; margin-top: 0.5rem;"></textarea>
+<div class="quiz-question">
+  <label>>_ 4. What is your experience with data structures?</label>
+  <textarea [(ngModel)]="quizService.answers[3]" rows="3"></textarea>
 </div>
 
-<button (click)="nextPage()" style="padding: 0.5rem 1rem; font-size: 1rem;">Next</button>
+<img 
+  src="RightArrow.png" 
+  alt="Next" 
+  class="next-arrow" 
+  [routerLink]="'/quiz-page-2'"
+/>
+
+<footer class="page-footer"></footer>

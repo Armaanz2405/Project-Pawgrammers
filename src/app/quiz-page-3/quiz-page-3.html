@@ -1,23 +1,29 @@
-<h2>Quiz Page 3</h2>
 
-<div style="margin-bottom: 1.5rem;">
-  <label>9. How comfortable are you with object-oriented programming?</label>
-  <textarea [(ngModel)]="quizService.answers[8]" rows="3" style="width: 100%; margin-top: 0.5rem;"></textarea>
+<div class="quiz-question">
+  <label>>_ 9. Tell a time you've had to debug a program and what you did to solve it.</label>
+  <textarea [(ngModel)]="quizService.answers[8]" rows="3"></textarea>
 </div>
 
-<div style="margin-bottom: 1.5rem;">
-  <label>10. Describe a scenario where you optimized code performance.</label>
-  <textarea [(ngModel)]="quizService.answers[9]" rows="3" style="width: 100%; margin-top: 0.5rem;"></textarea>
+<div class="quiz-question">
+  <label>>_ 10. Have you ever worked with specific workflow methods, how comfortable are you with them?</label>
+  <textarea [(ngModel)]="quizService.answers[9]" rows="3"></textarea>
 </div>
 
-<div style="margin-bottom: 1.5rem;">
-  <label>11. Do you have experience with web development frameworks?</label>
-  <textarea [(ngModel)]="quizService.answers[10]" rows="3" style="width: 100%; margin-top: 0.5rem;"></textarea>
+<div class="quiz-question">
+  <label>>_ 11. Have you ever worked with systems programming, what is your experience?</label>
+  <textarea [(ngModel)]="quizService.answers[10]" rows="3"></textarea>
 </div>
 
-<div style="margin-bottom: 1.5rem;">
-  <label>12. What areas of programming do you want to improve?</label>
-  <textarea [(ngModel)]="quizService.answers[11]" rows="3" style="width: 100%; margin-top: 0.5rem;"></textarea>
+<div class="quiz-question">
+  <label>>_ 12. Rate your knowledge in software architecture? (1-10) Explain.</label>
+  <textarea [(ngModel)]="quizService.answers[11]" rows="3"></textarea>
 </div>
 
-<button (click)="submit()" style="padding: 0.5rem 1rem; font-size: 1rem;">Submit</button>
+<img 
+  src="RightArrow.png" 
+  alt="Next" 
+  class="next-arrow" 
+  [routerLink]="'/result-earth'"
+/>
+
+<footer class="page-footer"></footer>
