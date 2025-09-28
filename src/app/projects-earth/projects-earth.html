@@ -7,8 +7,21 @@
 
 <div class="orbit-container">
   <button class="orbit-button" (click)="goToResults()">
-    <img [src]="orbitItems[currentIndex].src"
-         [alt]="orbitItems[currentIndex].name" />
+    <!-- Previous image slides out -->
+    <img
+      *ngIf="animationDirection"
+      [src]="orbitItems[previousIndex].src"
+      [alt]="orbitItems[previousIndex].name"
+      [class.slide-out-left]="animationDirection === 'left'"
+      [class.slide-out-right]="animationDirection === 'right'"
+    />
+    <!-- Current image slides in -->
+    <img
+      [src]="orbitItems[currentIndex].src"
+      [alt]="orbitItems[currentIndex].name"
+      [class.slide-in-left]="animationDirection === 'right'"
+      [class.slide-in-right]="animationDirection === 'left'"
+    />
   </button>
 </div>
 

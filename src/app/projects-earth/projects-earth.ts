@@ -14,17 +14,37 @@ export class ProjectsEarth {
   ];
 
   currentIndex = 0;
+  previousIndex = 0;
+  animationDirection: '' | 'left' | 'right' = '';
+  isAnimating = false; // prevent double clicks
 
   constructor(private router: Router) {}
 
   moveLeft() {
+    if (this.isAnimating) return;
+    this.isAnimating = true;
+    this.previousIndex = this.currentIndex;
+    this.animationDirection = 'left';
     this.currentIndex =
       (this.currentIndex - 1 + this.orbitItems.length) % this.orbitItems.length;
+
+    setTimeout(() => {
+      this.animationDirection = '';
+      this.isAnimating = false;
+    }, 600); // match CSS animation duration
   }
 
   moveRight() {
-    this.currentIndex =
-      (this.currentIndex + 1) % this.orbitItems.length;
+    if (this.isAnimating) return;
+    this.isAnimating = true;
+    this.previousIndex = this.currentIndex;
+    this.animationDirection = 'right';
+    this.currentIndex = (this.currentIndex + 1) % this.orbitItems.length;
+
+    setTimeout(() => {
+      this.animationDirection = '';
+      this.isAnimating = false;
+    }, 600);
   }
 
   goToResults() {
