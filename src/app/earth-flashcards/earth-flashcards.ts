@@ -1,9 +1,11 @@
 import { Component, OnInit, OnDestroy } from '@angular/core';
 import { RouterModule } from '@angular/router';
+import { CommonModule } from '@angular/common';
+
 
 @Component({
   selector: 'app-earth-flashcards',
-  imports: [RouterModule],
+  imports: [RouterModule, CommonModule],
   templateUrl: './earth-flashcards.html',
   styleUrl: './earth-flashcards.css'
 })
