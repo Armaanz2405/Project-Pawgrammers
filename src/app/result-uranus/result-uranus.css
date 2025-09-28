@@ -3,15 +3,26 @@
   font-size: 4rem; /* big text */
   color: rgba(255, 255, 255); /* white, transparent (70%) */
   position: absolute;
-  top: 60px;   /* space from top */
-  left: 60px;  /* space from left */
+  top: 40px;   /* space from top */
+  left: 40px;  /* space from left */
+}
+
+.planet-subheading {
+  position: absolute;   /* takes it out of normal flow */
+  top: 200px;           /* distance from top of page */
+  left: 50%;            /* center horizontally */
+  transform: translateX(-50%); /* truly center */
+  font-family: 'Audiowide', sans-serif;
+  font-size: 3rem;
+  color: #FF4136;       /* orange */
+  text-align: center;
 }
 
 .result-image {
   display: flex;
   justify-content: center; /* center horizontally */
   align-items: center;     /* center vertically if container grows */
-  margin-top: 200px;       /* spacing below heading */
+  margin-top: 270px;       /* spacing below heading */
 }
 
 .result-image img {
