@@ -7,20 +7,20 @@
 
 <div class="orbit-container">
   <button class="orbit-button" (click)="goToResults()">
-    <!-- Previous image slides out -->
+    <!-- Previous image slides out along rising arc -->
     <img
       *ngIf="animationDirection"
       [src]="orbitItems[previousIndex].src"
       [alt]="orbitItems[previousIndex].name"
-      [class.slide-out-left]="animationDirection === 'left'"
-      [class.slide-out-right]="animationDirection === 'right'"
+      [class.curve-out-left]="animationDirection === 'left'"
+      [class.curve-out-right]="animationDirection === 'right'"
     />
-    <!-- Current image slides in -->
+    <!-- Current image slides in along rising arc -->
     <img
       [src]="orbitItems[currentIndex].src"
       [alt]="orbitItems[currentIndex].name"
-      [class.slide-in-left]="animationDirection === 'right'"
-      [class.slide-in-right]="animationDirection === 'left'"
+      [class.curve-in-left]="animationDirection === 'right'"
+      [class.curve-in-right]="animationDirection === 'left'"
     />
   </button>
 </div>

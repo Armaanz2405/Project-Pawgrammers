@@ -31,7 +31,7 @@ export class ProjectsEarth {
     setTimeout(() => {
       this.animationDirection = '';
       this.isAnimating = false;
-    }, 600); // match CSS animation duration
+    }, 600);
   }
 
   moveRight() {

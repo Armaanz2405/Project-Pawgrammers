@@ -1,107 +1,151 @@
 .earth-container {
-    position: fixed;
-    bottom: 0;
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: flex-end;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+}
+
+.earth {
+  width: 500px;
+  max-width: 90vw;
+  height: auto;
+  margin-bottom: -150px;
+  z-index: 1;
+}
+
+.arrow {
+  position: fixed;
+  bottom: 50px;
+  width: 120px;
+  cursor: pointer;
+  z-index: 20;
+}
+
+.left {
+  left: 20px;
+}
+
+.right {
+  right: 20px;
+}
+
+.orbit-container {
+  position: fixed;
+  top: 35%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 150px;
+  height: 150px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+.orbit-button {
+  background: none;
+  border: none;
+  cursor: pointer;
+  position: relative;
+}
+
+.orbit-button img {
+  width: 200px;
+  top: 0;
+  left: 0;
+}
+
+/* Curved animations – rising arc from bottom corners */
+
+/* Enter from bottom-left to center */
+@keyframes curveInBottomLeftUp {
+  0% {
+    transform: translate(-250%, 250%) rotate(-30deg);
+    opacity: 0;
   }
-  
-  .earth {
-    width: 500px;
-    max-width: 90vw;
-    height: auto;
-    margin-bottom: -150px;
-    z-index: 1;
+  50% {
+    transform: translate(-50%, -100%) rotate(-15deg); /* high arc */
+    opacity: 1;
   }
-  
-  .arrow {
-    position: fixed;
-    bottom: 50px;
-    width: 120px;
-    cursor: pointer;
-    z-index: 20;
+  100% {
+    transform: translate(0, 0) rotate(0deg);
+    opacity: 1;
   }
-  
-  .left {
-    left: 20px;
+}
+
+/* Exit to bottom-left */
+@keyframes curveOutBottomLeftUp {
+  0% {
+    transform: translate(0, 0) rotate(0deg);
+    opacity: 1;
   }
-  
-  .right {
-    right: 20px;
+  50% {
+    transform: translate(-50%, -100%) rotate(15deg);
+    opacity: 1;
   }
-  
-  .orbit-container {
-    position: fixed;
-    top: 35%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    z-index: 30;
-    width: 150px;
-    height: 150px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    position: relative;
+  100% {
+    transform: translate(-250%, 250%) rotate(30deg);
+    opacity: 0;
   }
-  
-  .orbit-button {
-    background: none;
-    border: none;
-    cursor: pointer;
-    position: relative;
+}
+
+/* Enter from bottom-right to center */
+@keyframes curveInBottomRightUp {
+  0% {
+    transform: translate(250%, 250%) rotate(30deg);
+    opacity: 0;
   }
-  
-  .orbit-button img {
-    width: 100%;
-    top: 0;
-    left: 0;
+  50% {
+    transform: translate(50%, -100%) rotate(15deg); /* high arc */
+    opacity: 1;
   }
-  
-  /* Slide animations */
-  @keyframes slideOutLeft {
-    0% { transform: translateX(0); opacity: 1; }
-    100% { transform: translateX(-150%); opacity: 0; }
+  100% {
+    transform: translate(0, 0) rotate(0deg);
+    opacity: 1;
   }
-  
-  @keyframes slideOutRight {
-    0% { transform: translateX(0); opacity: 1; }
-    100% { transform: translateX(150%); opacity: 0; }
+}
+
+/* Exit to bottom-right */
+@keyframes curveOutBottomRightUp {
+  0% {
+    transform: translate(0, 0) rotate(0deg);
+    opacity: 1;
   }
-  
-  @keyframes slideInLeft {
-    0% { transform: translateX(-150%); opacity: 0; }
-    100% { transform: translateX(0); opacity: 1; }
+  50% {
+    transform: translate(50%, -100%) rotate(-15deg);
+    opacity: 1;
   }
-  
-  @keyframes slideInRight {
-    0% { transform: translateX(150%); opacity: 0; }
-    100% { transform: translateX(0); opacity: 1; }
+  100% {
+    transform: translate(250%, 250%) rotate(-30deg);
+    opacity: 0;
   }
-  
-  .slide-out-left {
-    animation: slideOutLeft 0.6s forwards;
-  }
-  
-  .slide-out-right {
-    animation: slideOutRight 0.6s forwards;
-  }
-  
-  .slide-in-left {
-    animation: slideInLeft 0.6s forwards;
-  }
-  
-  .slide-in-right {
-    animation: slideInRight 0.6s forwards;
-  }
-  
-  .page-footer {
-    background-color: #24164C;
-    height: 50px;
-    width: 100%;
-    position: fixed;
-    bottom: 0;
-    left: 0;
-    z-index: 1000;
-  }
-  
+}
+
+/* Classes for Angular binding */
+.curve-in-left {
+  animation: curveInBottomLeftUp 0.6s forwards;
+}
+
+.curve-out-left {
+  animation: curveOutBottomLeftUp 0.6s forwards;
+}
+
+.curve-in-right {
+  animation: curveInBottomRightUp 0.6s forwards;
+}
+
+.curve-out-right {
+  animation: curveOutBottomRightUp 0.6s forwards;
+}
+
+.page-footer {
+  background-color: #24164C;
+  height: 50px;
+  width: 100%;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  z-index: 1000;
+}
