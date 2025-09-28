@@ -1,1 +1,98 @@
-<p>earth-flashcards works!</p>
+<body>
+  <!-- Header -->
+  <header>
+    <div class="header-container">
+      <!-- Left Side: Text Content -->
+      <div class="header-text">
+        <h1 class="main-header">>_ Flashcards</h1>
+      </div>
+    </div>
+  </header>
+
+  <!-- Main Container with Sidebar and Content -->
+  <div class="container">
+    <!-- Sidebar Container -->
+    <div class="sidebar-container">
+      <!-- Sidebar Background (full height with shadow) -->
+      <div class="sidebar-background"></div>
+      <!-- Sticky Sidebar Content -->
+      <nav class="sidebar-content">
+        <h2>Before You Begin...</h2>
+        <ul>
+          <!-- Divider placed above the first item -->
+          <li class="divider"></li>
+          <li><button (click)="scrollTo('description')">Description</button></li>
+          <li><button (click)="scrollTo('video-tutorials')">Video Tutorials</button></li>
+          <li><button (click)="scrollTo('online-resources')">Online Resources</button></li>
+          <li><button (click)="scrollTo('start')">Start Coding!</button></li>
+        </ul>
+      </nav>
+    </div>
+
+    <!-- Main Content Area -->
+    <main class="main-content">
+      <!-- Introduction Section -->
+      <section class="content-section" id="description">
+        <div class="section-heading">
+          <h2>Description</h2>
+        </div>
+        <div class="section-text">
+          <p>
+            blah blah blah
+          </p>
+        </div>
+      </section>
+
+      <!-- Colleges Section -->
+      <section class="content-section" id="video-tutorials">
+        <div class="section-heading">
+          <h2>Video Tutorials</h2>
+        </div>
+        <div class="section-text">
+            <p>
+            blah blah blah
+            </p>
+        </div>
+      </section>
+
+      <!-- Extracurriculars Section -->
+      <section class="content-section" id="online-resources">
+        <div class="section-heading">
+          <h2>Online Resources</h2>
+        </div>
+        <div class="section-text">
+          <p>
+            blah blah blah
+          </p>
+        </div>
+      </section>
+
+      <!-- Events Section -->
+      <section class="content-section" id="start">
+        <div class="section-heading">
+          <h2>Start Coding!</h2>
+        </div>
+        <div class="section-text">
+          <p>
+            blah blah blah
+            blah
+
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            blah
+            <br>
+            
+          </p>
+        </div>
+      </section>
+    </main>
+  </div>

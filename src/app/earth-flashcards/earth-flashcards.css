@@ -1,0 +1,194 @@
+:host {
+    display: block;
+    overflow: visible !important;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  /* Set html and body to full height */
+  html, body {
+    height: 100%;
+  }
+  
+  /* Header Styling */
+  header {
+    grid-row: 1;
+    background: #C6B7DC;
+    padding: 20px;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.25);
+  }
+  
+  .header-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .header-text {
+    text-align: left;
+    padding: 50px;
+    margin-left: 100px;
+  }
+  
+  .main-header {
+    font-size: 60px;
+    margin: 0;
+  }
+  
+  /* Main Container (Sidebar and Content) */
+  .container {
+    grid-row: 2;
+    display: flex;
+    align-items: stretch; /* Ensures children stretch to fill available height */
+  }
+  
+  /* Sidebar Container */
+  .sidebar-container {
+    position: relative;
+    width: 280px;
+  }
+  
+  /* Sidebar Background - fills entire container height */
+  .sidebar-background {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: #DED0F0;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.25);
+    z-index: 1;
+  }
+  
+  /* Sticky Sidebar Content */
+  .sidebar-content {
+    position: sticky;
+    top: 0;
+    z-index: 2;
+    padding: 20px;
+    font-size: 16px;
+  }
+  
+  /* Sidebar Heading Spacing */
+  .sidebar-content h2 {
+    margin-bottom: 0.5em; /* Slight gap before the divider */
+  }
+  
+  /* Sidebar List */
+  .sidebar-content ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  
+  /* Divider line placed as its own <li> */
+  .sidebar-content li.divider {
+    margin-left: -20px;
+    margin-right: -20px;
+    width: calc(100% + 40px);
+    border-bottom: 1px solid black;
+    height: 0;
+    padding: 0;
+    list-style: none;
+  }
+  
+  /* Each list item extends fully across the padded container */
+  .sidebar-content li {
+    margin-left: -20px;
+    margin-right: -20px;
+    width: calc(100% + 40px);
+    border-bottom: 1px solid black;
+  }
+  
+  /* Remove double top border if desired */
+  .sidebar-content li.divider + li {
+    border-top: none;
+  }
+  
+  /* Button Fills Entire List Item */
+  /* Using a transparent top border to simulate spacing */
+  .sidebar-content li button {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    padding: 10px 20px;
+    border-top: 5px solid transparent; /* Simulated 5px top gap */
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-size: 22px;
+    font-weight: bolder;
+    font-family: inherit;
+    color: inherit;
+    text-align: left;
+    transition: background-color 0.3s, color 0.3s, border-top-color 0.3s;
+  }
+  
+  /* Hover effect on the button, including the top border area */
+  .sidebar-content li button:hover {
+    background-color: #24164C;
+    color: #fff;
+    border-top-color: #24164C;
+  }
+  
+  /* Arrow styling - remains black on hover */
+  .sidebar-content li button::after {
+    content: '>';
+    margin-left: 10px;
+    color: #2E2019;
+  }
+  .sidebar-content li button:hover::after {
+    color: #2E2019;
+  }
+  
+  /* Main Content Area */
+  .main-content {
+    flex: 1;
+    margin-left: 50px;
+    padding: 20px;
+  }
+  
+  .content-section {
+    padding: 30px;
+  }
+  
+  .section-heading {
+    background-color: #FFF29D;
+    border-radius: 25px;
+    padding: 10px 15px;
+    display: inline-block;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.25);
+    width: 350px;
+    text-align: center;
+  }
+  
+  .section-heading h2 {
+    margin: 0;
+    font-size: 35px;
+  }
+  
+  .section-text {
+    font-family: 'Carme';
+    margin-top: 30px;
+    margin-left: 40px;
+    font-size: 22px;
+  }
+  
+  /* College-specific styling */
+  .college {
+    margin-bottom: 20px;
+  }
+  .college h3 {
+    font-size: 26px;
+    margin-bottom: 10px;
+  }
+  
+  .college ul {
+    list-style: disc;
+    padding-left: 2em; /* Increase left padding to indent bullet points */
+  }
