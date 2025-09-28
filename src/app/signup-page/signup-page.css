@@ -1,31 +1,28 @@
-:host {
-  display: block;
-  min-height: 100vh;
-  width: 100vw;
-
-  background: 
-    url('/Constellations.png') no-repeat center 55% / 120% 160%, /* move image up */
-    #24164C;
-}
-
+body, html {
+    margin: 0;
+    padding: 0;
+    height: 100vh;  
+    background: url('/SignUpBackground.png');
+    overflow: hidden;
+    background-size: 100% auto; 
+  }
 
 .signup-text-box {
   position: absolute;
   top: 50%;
-  left: 10%;                 /* positions box toward the middle-left */
-  transform: translateY(-50%); /* centers vertically */
+  left: 10%;               
+  transform: translateY(-50%); 
   background-color: #79747E;
   padding: 2rem 3rem;
   border-radius: 35px;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3); /* drop shadow */
-  max-width: 350px;          /* keeps it long but not too wide */
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+  max-width: 350px;      
 }
 
-
 .signup-header {
-  font-family: 'Audiowide', sans-serif; /* your global header font */
-  font-size: 2rem;
-  color: #F5ECD7;            /* light color for contrast */
+  font-family: 'Audiowide', sans-serif;
+  font-size: 2.5rem;
+  color: #F5ECD7;      
   margin-bottom: 1rem;
 }
 
@@ -35,12 +32,55 @@
   line-height: 1.5;
 }
 
-.rocket {
-  position: absolute;
-  top: 50%;                 /* center vertically */
-  right: 10%;               /* middle-right */
-  transform: translateY(-50%);
-  max-width: 550px;         /* roughly same size as text box */
-  width: 40%;               /* flexible width relative to page */
-  height: auto;             /* keep aspect ratio */
-}
+.login-form {
+    margin-top: 1rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    width: 250px;
+  }
+  
+  .login-form input {
+    padding: 0.7rem;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    font-family: 'Audiowide', sans-serif;
+    font-size: 1.5rem;
+    background-color: #F5ECD7;
+    color: #0C091E;
+  }
+
+  .rotated-box {
+    position: absolute;       
+    top: 28%;                 
+    right: -143%;             
+    transform: rotate(37deg);   /* rotate 40 degrees clockwise */
+    width: 250px;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+  }
+  
+  .rotated-box input {
+    padding: 0.7rem;
+    border: 1px solid #FFF29D;
+    border-radius: 6px;
+    font-size: 1rem;
+    background-color: #F5ECD7;
+    color: #0C091E;
+  }
+
+  .next-arrow {
+    width: 100px;            
+    height: auto;
+    cursor: pointer;
+    position: fixed;         
+    bottom: 140px;          
+    right: -580px;           
+    transition: transform 0.3s ease-in-out;
+    transform: rotate(40deg); 
+  }
+  
+  .next-arrow:hover {
+    transform: rotate(40deg) scale(1.1); /* tilt + grow on hover */
+  }

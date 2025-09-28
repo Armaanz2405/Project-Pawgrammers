@@ -1,3 +1,12 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Planet Map</title>
+</head>
+<body>
+  <div class="container">
 <div class="signup-text-box">
   <h1 class="signup-header">>_ Project Pawgrammers</h1>
   <p class="signup-subtext">
@@ -6,7 +15,24 @@
 <br>
 >_ Your adventure starts now. Which planet will you land on? 
   </p>
-</div>
 
-<img src="Rocket.png" alt="Alien Explorer" class="rocket">
+  <div class="login-form rotated-box">
+    <input type="text" placeholder="Username">
+    <input type="password" placeholder="Password">
+  </div>
+
+  <img 
+  src="RightArrow.png" 
+  alt="Next" 
+  class="next-arrow" 
+  [routerLink]="'/quiz-page-1'"
+/>
+
+  </div>
+  </div>
+</body>
+
+<footer class="page-footer"></footer>
+
+</html>
 
