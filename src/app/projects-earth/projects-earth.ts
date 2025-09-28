@@ -48,6 +48,6 @@ export class ProjectsEarth {
   }
 
   goToResults() {
-    this.router.navigate(['/result-earth']);
+    this.router.navigate(['/earth-project']);
   }
 }
