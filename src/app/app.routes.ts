@@ -8,8 +8,10 @@ import { ResultEarth } from './result-earth/result-earth';
 import { ResultJupiter } from './result-jupiter/result-jupiter';
 import { ResultUranus } from './result-uranus/result-uranus';
 import { PlanetsMap } from './planets-map/planets-map';
+import { ProjectsMercury } from './projects-mercury/projects-mercury';
 import { ProjectsEarth } from './projects-earth/projects-earth';
 import { ProjectsJupiter } from './projects-jupiter/projects-jupiter';
+import { ProjectsUranus } from './projects-uranus/projects-uranus';
 import { EarthFlashcards } from './earth-flashcards/earth-flashcards';
 
 export const routes: Routes = [
@@ -22,7 +24,9 @@ export const routes: Routes = [
   { path: 'result-jupiter', component: ResultJupiter },
   { path: 'result-uranus', component: ResultUranus },
   { path: 'planets-map', component: PlanetsMap },
+  { path: 'projects-mercury', component: ProjectsMercury },
   { path: 'projects-earth', component: ProjectsEarth },
   { path: 'projects-jupiter', component: ProjectsJupiter },
+  { path: 'projects-uranus', component: ProjectsUranus },
   { path: 'earth-flashcards', component: EarthFlashcards },
 ];
