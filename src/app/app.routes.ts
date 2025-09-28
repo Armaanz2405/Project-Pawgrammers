@@ -9,7 +9,8 @@ import { ResultJupiter } from './result-jupiter/result-jupiter';
 import { ResultUranus } from './result-uranus/result-uranus';
 import { PlanetsMap } from './planets-map/planets-map';
 import { ProjectsEarth } from './projects-earth/projects-earth';
-
+import { ProjectsJupiter } from './projects-jupiter/projects-jupiter';
+import { EarthFlashcards } from './earth-flashcards/earth-flashcards';
 
 export const routes: Routes = [
   { path: '', component: SignupPage },
@@ -22,4 +23,6 @@ export const routes: Routes = [
   { path: 'result-uranus', component: ResultUranus },
   { path: 'planets-map', component: PlanetsMap },
   { path: 'projects-earth', component: ProjectsEarth },
+  { path: 'projects-jupiter', component: ProjectsJupiter },
+  { path: 'earth-flashcards', component: EarthFlashcards },
 ];
