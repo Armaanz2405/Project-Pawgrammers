@@ -1,1 +1,55 @@
-<p>planets-map works!</p>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Planet Map</title>
+</head>
+<body>
+  <div class="container">
+    
+    <button class="planet-btn Mercury" onclick="window.location.href='earth-flashcards.html'">
+      <img src="Mercury.png" alt="Mercury">
+    </button>
+
+    <button class="planet-btn Venus" onclick="window.location.href='earth-flashcards.html'">
+      <img src="Venus.png" alt="Venus">
+    </button>
+
+    <button class="planet-btn Earth" onclick="window.location.href='earth-flashcards.html'">
+      <img src="Earth.png" alt="Earth">
+    </button>
+
+    <button class="planet-btn Mars" onclick="window.location.href='earth-flashcards.html'">
+      <img src="Mars.png" alt="Mars">
+    </button>
+
+    <button class="planet-btn Jupiter" onclick="window.location.href='earth-flashcards.html'">
+      <img src="Jupiter.png" alt="Jupiter">
+    </button>
+
+    <button class="planet-btn Saturn" onclick="window.location.href='earth-flashcards.html'">
+      <img src="Saturn.png" alt="Saturn">
+    </button>
+
+    <button class="planet-btn Uranus" onclick="window.location.href='earth-flashcards.html'">
+      <img src="Uranus.png" alt="Uranus">
+    </button>
+
+    <button class="planet-btn Neptune" onclick="window.location.href='earth-flashcards.html'">
+      <img src="Neptune.png" alt="Neptune">
+    </button>
+
+    <img 
+    src="LeftArrow.png" 
+    alt="Next" 
+    class="next-arrow" 
+    [routerLink]="'/result-earth'"
+  />
+
+  </div>
+</body>
+
+<footer class="page-footer"></footer>
+
+</html>
