@@ -16,26 +16,35 @@ export class QuizPage3 {
 
   quizService = inject(QuizAnswers);
   http = inject(HttpClient);
+  router = inject(Router);
 
   submit() {
-    const unanswered = this.quizService.answers.slice(8, 12).some(ans => !ans.trim());    if (unanswered) {
+    // Validate all 4 answers on page 3 (indexes 8-11)
+    const unanswered = this.quizService.answers.slice(8, 12).some(ans => !ans.trim());
+    if (unanswered) {
       alert('Please answer all questions before submitting.');
       return;
     }
 
+    // Send all 12 answers to Flask backend
     const allAnswers = this.quizService.getAllAnswers();
-    console.log('All answers:', allAnswers);
-    // TODO: send allAnswers to backend
-    // Send to Python backend
-    this.http.post('http://localhost:5000/submit-quiz', allAnswers)
+    this.http.post<any>('http://localhost:5000/submit-quiz', allAnswers)
       .subscribe({
         next: (res) => {
-          console.log('Server response:', res);
-          alert('Quiz submitted successfully!');
+          if (res.status === 'success') {
+            const nextPage = res.next_page; // e.g. "/result-jupiter"
+            console.log('Rating:', res.rating);
+            console.log('Next page:', nextPage);
+
+            // Navigate to the page returned by Flask
+            this.router.navigate(['/' + nextPage]);
+          } else {
+            alert('Error submitting quiz: ' + res.message);
+          }
         },
         error: (err) => {
-          console.error(err);
-          alert('Error submitting quiz');
+          console.error('Submission error:', err);
+          alert('Error submitting quiz. Please try again.');
         }
       });
   }
