@@ -1,0 +1,62 @@
+.result-heading {
+  font-family: 'Audiowide', sans-serif; /* uses global font */
+  font-size: 4rem; /* big text */
+  color: rgba(255, 255, 255); /* white, transparent (70%) */
+  position: absolute;
+  top: 60px;   /* space from top */
+  left: 60px;  /* space from left */
+}
+
+.result-image {
+  display: flex;
+  justify-content: center; /* center horizontally */
+  align-items: center;     /* center vertically if container grows */
+  margin-top: 200px;       /* spacing below heading */
+}
+
+.result-image img {
+  width: 500px;
+  max-width: 100%;   /* shrink if screen is small */
+  height: auto;     /* keep proportions */
+}
+
+.button-row {
+  position: absolute;
+  bottom: 100px;
+  width: 100%;
+  display: flex;
+  justify-content: space-around; /* puts buttons nicely apart */
+  gap: 50px;                     /* optional spacing */
+}
+
+.lift-off-button,
+.choose-new-button {
+  flex: 1;               /* both buttons take equal space */
+  max-width: 270px;      /* optional: limit max width */
+  font-family: 'Audiowide', sans-serif;
+  font-size: 1.5rem;
+  color: #ffffff;
+  background-color: #24164C;
+  border: 3px solid #BA8DF0;
+  padding: 10px 20px;
+  cursor: pointer;
+  border-radius: 0;
+  outline: none;
+  text-align: center;    /* centers multi-line text */
+}
+
+.lift-off-button:hover,
+.choose-new-button:hover {
+  background-color: #3B1F70;
+  border-color: #D2A0FF;
+}
+
+.page-footer {
+  background-color: #24164C;
+  height: 60px;           /* adjust height as needed */
+  width: 100%;
+  position: fixed;        /* stick to bottom of viewport */
+  bottom: 0;
+  left: 0;
+  z-index: 1000;          /* make sure it’s on top */
+}
