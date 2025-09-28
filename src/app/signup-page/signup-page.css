@@ -1,0 +1,42 @@
+:host {
+  display: block;
+  min-height: 100vh;   /* full viewport height */
+  width: 100vw;        /* full viewport width */
+  background: url('/SignUpBackground.png') no-repeat center center;
+  background-size: 100% 100%; /* stretch to fill both width and height */
+}
+
+.signup-text-box {
+  position: absolute;
+  top: 50%;
+  left: 15%;                 /* positions box toward the middle-left */
+  transform: translateY(-50%); /* centers vertically */
+  background-color: #79747E;
+  padding: 2rem 3rem;
+  border-radius: 35px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3); /* drop shadow */
+  max-width: 350px;          /* keeps it long but not too wide */
+}
+
+.signup-header {
+  font-family: 'Audiowide', sans-serif; /* your global header font */
+  font-size: 2rem;
+  color: #F5ECD7;            /* light color for contrast */
+  margin-bottom: 1rem;
+}
+
+.signup-subtext {
+  font-size: 1.2rem;
+  color: #F5ECD7;
+  line-height: 1.5;
+}
+
+.rocket {
+  position: absolute;
+  top: 50%;                 /* center vertically */
+  right: 10%;               /* middle-right */
+  transform: translateY(-50%);
+  max-width: 550px;         /* roughly same size as text box */
+  width: 40%;               /* flexible width relative to page */
+  height: auto;             /* keep aspect ratio */
+}
