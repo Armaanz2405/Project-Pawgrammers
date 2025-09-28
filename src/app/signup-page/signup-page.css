@@ -1,10 +1,13 @@
 :host {
   display: block;
-  min-height: 100vh;   /* full viewport height */
-  width: 100vw;        /* full viewport width */
-  background: url('/SignUpBackground.png') no-repeat center center;
-  background-size: 100% 100%; /* stretch to fill both width and height */
+  min-height: 100vh;
+  width: 100vw;
+
+  background: 
+    url('/Constellations.png') no-repeat center 55% / 120% 160%, /* move image up */
+    #24164C;
 }
+
 
 .signup-text-box {
   position: absolute;
