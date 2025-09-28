@@ -11,11 +11,12 @@
   display: flex;
   justify-content: center; /* center horizontally */
   align-items: center;     /* center vertically if container grows */
-  margin-top: 100px;       /* spacing below heading */
+  margin-top: 200px;       /* spacing below heading */
 }
 
 .result-image img {
-  max-width: 60%;   /* shrink if screen is small */
+  width: 500px;
+  max-width: 100%;   /* shrink if screen is small */
   height: auto;     /* keep proportions */
 }
 

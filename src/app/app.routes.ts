@@ -8,6 +8,8 @@ import { ResultEarth } from './result-earth/result-earth';
 import { ResultJupiter } from './result-jupiter/result-jupiter';
 import { ResultUranus } from './result-uranus/result-uranus';
 import { PlanetsMap } from './planets-map/planets-map';
+import { ProjectsEarth } from './projects-earth/projects-earth';
+
 
 export const routes: Routes = [
   { path: '', component: SignupPage },
@@ -19,4 +21,5 @@ export const routes: Routes = [
   { path: 'result-jupiter', component: ResultJupiter },
   { path: 'result-uranus', component: ResultUranus },
   { path: 'planets-map', component: PlanetsMap },
+  { path: 'projects-earth', component: ProjectsEarth },
 ];
