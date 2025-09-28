@@ -34,30 +34,30 @@
 
   .right-buttons {
     position: absolute;
-    top: 500px;                   /* vertically centered */
-    right: 200px;                /* distance from right edge */
+    top: 568px;                   /* vertically centered */
+    right: 289px;                /* distance from right edge */
     transform: translateY(-50%); /* perfect vertical centering */
     display: flex;
     flex-direction: column;     /* stack vertically */
-    gap: 100px;                  /* space between buttons */
+    gap: 159px;                  /* space between buttons */
   }
   
   .code-alone-button,
   .collaborate-button {
     flex: none;                 /* don’t stretch */
-    width: 200px;               /* fixed width */
+    width: 300px;    
     font-family: 'Audiowide', sans-serif;
-    font-size: 1.5rem;
+    font-size: 2rem;
     color: #ffffff;
     background-color: #24164C;
     border: 3px solid #BA8DF0;
-    padding: 10px 20px;
+    padding: 15px 25px;
     cursor: pointer;
     border-radius: 0;
     outline: none;
     text-align: center;
   }
-  
+
   .code-alone-button:hover,
   .collaborate-button:hover {
     background-color: #3B1F70;
