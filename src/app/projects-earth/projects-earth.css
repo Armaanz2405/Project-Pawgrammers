@@ -1,0 +1,61 @@
+.earth-container {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+  }
+  
+  .earth {
+    width: 500px;
+    max-width: 90vw;
+    height: auto;
+    margin-bottom: -150px;
+    z-index: 1;
+  }
+  
+  .arrow {
+    position: fixed;
+    bottom: 50px;
+    width: 120px;
+    cursor: pointer;
+    z-index: 20;
+  }
+  
+  .left {
+    left: 20px;
+  }
+  
+  .right {
+    right: 20px;
+  }
+  
+  .orbit-container {
+    position: fixed;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 30;
+  }
+  
+  .orbit-button {
+    background: none;
+    border: none;
+    cursor: pointer;
+  }
+  
+  .orbit-button img {
+    width: 150px;
+  }
+  
+  .page-footer {
+    background-color: #24164C;
+    height: 50px;
+    width: 100%;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    z-index: 1000;
+  }
+  
