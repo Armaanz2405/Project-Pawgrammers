@@ -1,0 +1,68 @@
+:host {
+    display: block;
+    width: 100vw;
+    height: 1366px; /* keep same as image height */
+    background: 
+      url('/ProjectsBackground.png') no-repeat top center, /* foreground */
+      url('/Stars.png') repeat; /* repeating global background */
+    background-size: 
+      100% auto,  /* ProjectsBackground.png stretches full width */
+      auto;       /* Stars.png repeats naturally */
+  }
+  
+  .project-text-box {
+    position: absolute;       /* fixes it in place */
+    top: 145px;               /* adjust placement */
+    left: 612px;               /* adjust placement */
+    transform: translateX(-50%); /* perfectly centers */
+    max-width: 500px;          /* keeps it readable */
+    text-align: center;  
+    color: #60FF00;
+    font-family: inherit;     /* uses global font */
+    background: transparent;  /* fully transparent background */
+  }
+  
+  .project-header {
+    font-size: 2rem;   /* larger header font */
+    margin-bottom: 10px;
+  }
+  
+  .project-subtext {
+    font-size: 22px;   /* smaller body text */
+    line-height: 1.5;
+  }
+
+  .right-buttons {
+    position: absolute;
+    top: 500px;                   /* vertically centered */
+    right: 200px;                /* distance from right edge */
+    transform: translateY(-50%); /* perfect vertical centering */
+    display: flex;
+    flex-direction: column;     /* stack vertically */
+    gap: 100px;                  /* space between buttons */
+  }
+  
+  .code-alone-button,
+  .collaborate-button {
+    flex: none;                 /* don’t stretch */
+    width: 200px;               /* fixed width */
+    font-family: 'Audiowide', sans-serif;
+    font-size: 1.5rem;
+    color: #ffffff;
+    background-color: #24164C;
+    border: 3px solid #BA8DF0;
+    padding: 10px 20px;
+    cursor: pointer;
+    border-radius: 0;
+    outline: none;
+    text-align: center;
+  }
+  
+  .code-alone-button:hover,
+  .collaborate-button:hover {
+    background-color: #3B1F70;
+    border-color: #D2A0FF;
+  }
+  
+  
+  

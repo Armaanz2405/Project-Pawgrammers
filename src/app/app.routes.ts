@@ -13,6 +13,8 @@ import { ProjectsEarth } from './projects-earth/projects-earth';
 import { ProjectsJupiter } from './projects-jupiter/projects-jupiter';
 import { ProjectsUranus } from './projects-uranus/projects-uranus';
 import { EarthFlashcards } from './earth-flashcards/earth-flashcards';
+import { EarthProject } from './earth-project/earth-project';
+import { Collaborate } from './collaborate/collaborate';
 
 export const routes: Routes = [
   { path: '', component: SignupPage },
@@ -29,4 +31,6 @@ export const routes: Routes = [
   { path: 'projects-jupiter', component: ProjectsJupiter },
   { path: 'projects-uranus', component: ProjectsUranus },
   { path: 'earth-flashcards', component: EarthFlashcards },
+  { path: 'earth-project', component: EarthProject },
+  { path: 'collaborate', component: Collaborate },
 ];
