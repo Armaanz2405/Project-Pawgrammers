@@ -1,1 +1,15 @@
-<p>projects-earth works!</p>
+<div class="earth-container">
+  <img src="Earth.png" alt="Earth" class="earth" />
+</div>
+
+<img src="LeftArrow.png" alt="Left" class="arrow left" (click)="moveLeft()" />
+<img src="RightArrow.png" alt="Right" class="arrow right" (click)="moveRight()" />
+
+<div class="orbit-container">
+  <button class="orbit-button" (click)="goToResults()">
+    <img [src]="orbitItems[currentIndex].src"
+         [alt]="orbitItems[currentIndex].name" />
+  </button>
+</div>
+
+<div class="page-footer"></div>
