@@ -28,7 +28,7 @@ export class QuizPage3 {
 
     // Send all 12 answers to Flask backend
     const allAnswers = this.quizService.getAllAnswers();
-    this.http.post<any>('https://project-pawgrammers.onrender.com', allAnswers)
+    this.http.post<any>('https://project-pawgrammers.onrender.com/submit-quiz', allAnswers)
       .subscribe({
         next: (res) => {
           if (res.status === 'success') {
