@@ -2,7 +2,7 @@ body, html {
     margin: 0;
     padding: 0;
     height: 100vh;  
-    background: url('SignUpBackground.png');
+    background: url('/Project-Pawgrammers/SignUpBackground.png');
     overflow: hidden;
     background-size: 100% auto; 
   }

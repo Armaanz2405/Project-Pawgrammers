@@ -3,8 +3,8 @@
     width: 100vw;
     height: 1366px; /* keep same as image height */
     background: 
-      url('ProjectsBackground.png') no-repeat top center, /* foreground */
-      url('Stars.png') repeat; /* repeating global background */
+      url('/Project-Pawgrammers/ProjectsBackground.png') no-repeat top center, /* foreground */
+      url('/Project-Pawgrammers/Stars.png') repeat; /* repeating global background */
     background-size: 
       100% auto,  /* ProjectsBackground.png stretches full width */
       auto;       /* Stars.png repeats naturally */
