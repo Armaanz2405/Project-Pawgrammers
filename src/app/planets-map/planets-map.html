@@ -7,49 +7,48 @@
 </head>
 <body>
   <div class="container">
-    
-    <button class="planet-btn Mercury" onclick="window.location.href='earth-flashcards.html'">
+
+    <button class="planet-btn Mercury" [routerLink]="'/earth-flashcards'">
       <img src="Mercury.png" alt="Mercury">
     </button>
 
-    <button class="planet-btn Venus" onclick="window.location.href='earth-flashcards.html'">
+    <button class="planet-btn Venus" [routerLink]="'/earth-flashcards'">
       <img src="Venus.png" alt="Venus">
     </button>
 
-    <button class="planet-btn Earth" onclick="window.location.href='projects-earth'">
+    <button class="planet-btn Earth" [routerLink]="'/projects-earth'">
       <img src="Earth.png" alt="Earth">
     </button>
 
-    <button class="planet-btn Mars" onclick="window.location.href='earth-flashcards.html'">
+    <button class="planet-btn Mars" [routerLink]="'/earth-flashcards'">
       <img src="Mars.png" alt="Mars">
     </button>
 
-    <button class="planet-btn Jupiter" onclick="window.location.href='earth-flashcards.html'">
+    <button class="planet-btn Jupiter" [routerLink]="'/earth-flashcards'">
       <img src="Jupiter.png" alt="Jupiter">
     </button>
 
-    <button class="planet-btn Saturn" onclick="window.location.href='earth-flashcards.html'">
+    <button class="planet-btn Saturn" [routerLink]="'/earth-flashcards'">
       <img src="Saturn.png" alt="Saturn">
     </button>
 
-    <button class="planet-btn Uranus" onclick="window.location.href='earth-flashcards.html'">
+    <button class="planet-btn Uranus" [routerLink]="'/earth-flashcards'">
       <img src="Uranus.png" alt="Uranus">
     </button>
 
-    <button class="planet-btn Neptune" onclick="window.location.href='earth-flashcards.html'">
+    <button class="planet-btn Neptune" [routerLink]="'/earth-flashcards'">
       <img src="Neptune.png" alt="Neptune">
     </button>
 
     <img 
-    src="LeftArrow.png" 
-    alt="Next" 
-    class="next-arrow" 
-    [routerLink]="'/result-earth'"
-  />
+      src="LeftArrow.png" 
+      alt="Next" 
+      class="next-arrow" 
+      [routerLink]="'/result-earth'"
+    />
 
   </div>
 </body>
 
 <footer class="page-footer"></footer>
-
 </html>
