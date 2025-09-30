@@ -2,7 +2,7 @@ body, html {
   margin: 0;
   padding: 0;
   height: 100vh;
-  background: url('/collaborateScreen.png');
+  background: url('collaborateScreen.png');
   background-size: cover; 
   font-family: 'Audiowide', sans-serif;
 }
